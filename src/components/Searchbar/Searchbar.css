@@ -1,0 +1,158 @@
+/* Search Bar Container */
+.search-bar-container {
+  position: relative;
+  width: 80%;
+  max-width: 800px;
+  margin: auto;
+  padding: 10px;
+  z-index: 1;
+  /* flex-grow: 7; Ensures the search bar is on top */
+}
+
+/* Search Bar Styling */
+.search-bar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-radius: 20px;
+  overflow: hidden;
+  background-color: mediumaquamarine; 
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  color: black;
+  position: relative; /* Makes the dropdown appear correctly beneath it */
+}
+
+.search-bar input {
+  flex-grow: 1;
+  padding: 10px;
+  border: none;
+  outline: none;
+  border-radius: 20px 0 0 20px;
+  color: black; 
+  font-size: 16px;
+  background-color: mediumaquamarine; 
+
+}
+
+.price-filter,
+.category-filter {
+  border: none;
+  padding: 10px;
+  background-color: mediumaquamarine; 
+  outline: none;
+  font-size: 15px;
+  font-weight:bolder;
+  color:black;
+  cursor: pointer;
+  border-left: 1px solid #ddd;
+}
+
+.combo-button {
+  background-color: orange;
+  color: black;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.combo-button:hover {
+  background-color: darkorange;
+}
+
+.search-bar button {
+  background-color: mediumaquamarine;
+  color: black;
+  border: none;
+  padding: 18px 20px;
+  border-radius: 0 20px 20px 0;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 14px;
+  margin-top: 2px;
+}
+
+.search-bar button:hover {
+  background-color: darkorange;
+}
+
+/* Dropdown Styling */
+.dropdown {
+  position: absolute;
+  top: calc(100% + 5px); /* Dropdown below the search bar with a gap */
+  left: 0;
+  right: 0;
+  background-color: mediumaquamarine;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  margin-top: 5px;
+  max-height: 250px;
+  overflow-y: auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 10; /* Higher than the search bar */
+  color: black;
+}
+
+.dropdown li {
+  padding: 10px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color 0.3s ease;
+  font-size: 14px;
+}
+
+.dropdown li:hover {
+  background-color: lightgray;
+}
+
+.dropdown .category {
+  font-size: 12px;
+  color: gray;
+  font-weight: normal;
+}
+
+/* Hide Dropdown on Item Selection */
+.hidden {
+  display: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .search-bar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .search-bar input {
+    border-radius: 20px;
+  }
+
+  .price-filter,
+  .category-filter {
+    margin-top: 5px;
+    border-left: none;
+  }
+
+  .search-bar button {
+    margin-top: 5px;
+    border-radius: 20px;
+  }
+}
+
+/* Global Styles */
+body {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
+  color: black;
+  font-weight: bolder;
+  font-size: 15px;
+  background: linear-gradient(to right, #a7d9cc, #c2e3f3); /* Soft green to pastel blue */
+
+  text-align: center;
+}
+
+  /* Global styles (App.css or index.css) */
