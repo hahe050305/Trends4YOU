@@ -1,6 +1,6 @@
 # MICRO-TREND
 
-E-commerce themed Front End website styled with a unified colour theme [mediumseagreen, purple, mediums purple]
+E-commerce themed Front End website with a {dropdown search bar, filter options} styled with a unified colour theme [mediumseagreen, purple, mediums purple]
 
 The overall layout of website is scaffolded into different sections with navbars pointing to different sections of the website
 
